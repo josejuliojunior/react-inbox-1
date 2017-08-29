@@ -1,48 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
+import MessagesRead from './MessagesRead.js';
+import MessagesUnread from './MessagesUnread.js'
 
-class Messages extends Component {
-  render () {
-    return (
-      <div className="row toolbar">
-        <div className="col-md-12">
-          <p className="pull-right">
-            <span className="badge badge">2</span>
-            unread messages
-          </p>
-
-          <button className="btn btn-default">
-            <i className="fa fa-check-square-o"></i>
-          </button>
-
-          <button className="btn btn-default">
-            Mark As Read
-          </button>
-
-          <button className="btn btn-default">
-            Mark As Unread
-          </button>
-
-          <select className="form-control label-select">
-            <option>Apply label</option>
-            <option value="dev">dev</option>
-            <option value="personal">personal</option>
-            <option value="gschool">gschool</option>
-          </select>
-
-          <select classNameName="form-control label-select">
-            <option>Remove label</option>
-            <option value="dev">dev</option>
-            <option value="personal">personal</option>
-            <option value="gschool">gschool</option>
-          </select>
-
-          <button className="btn btn-default">
-            <i className="fa fa-trash-o"></i>
-          </button>
-        </div>
-      </div>
-    );
-  }
+const Messages = () => {
+  return (
+    // <h3>Messages Here!</h3>
+    <MessagesUnread />
+  )
 }
 
 export default Messages;
