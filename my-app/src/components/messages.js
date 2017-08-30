@@ -1,12 +1,12 @@
 import React from 'react';
-import MessagesRead from './MessagesRead.js';
-import MessagesUnread from './MessagesUnread.js'
+import Message from '../components/Message.js';
+import data from '../data/messages.js';
 
-const Messages = () => {
-  return (
-    // <h3>Messages Here!</h3>
-    <MessagesUnread />
-  )
-}
+const Messages = ({messages}) => (
+  <div>
+    { messages.map(message => <Message key={message.id} subject={message.subject}
+       read={message.read} starred={message.starred} selected={message.selected} labels={message.labels} /> ) }
+  </div>
+)
 
 export default Messages;
